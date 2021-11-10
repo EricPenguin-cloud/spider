@@ -1,0 +1,132 @@
+# curl "https://www.ebay.com/itm/183076849000?epid=209931856&hash=item2aa03b0568:g:9DwAAOSwIk9ahb-d"
+#  -H "sec-ch-ua-mobile: ?0"
+#  -H "Upgrade-Insecure-Requests: 1"
+#  -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.164 Safari/537.36"
+#  --compressed
+GET https://www.ebay.com/itm/183076849000?epid=209931856&hash=item2aa03b0568:g:9DwAAOSwIk9ahb-d
+sec-ch-ua-mobile: ?0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.164 Safari/537.36
+
+###
+
+
+# curl 'https://www.ebay.com/b/Auto-Parts-Accessories/6028/bn_569479'
+#  -H 'authority: www.ebay.com'
+#  -H 'cache-control: max-age=0'
+#  -H 'sec-ch-ua: "Microsoft Edge";v="95", "Chromium";v="95", ";Not A Brand";v="99"'
+#  -H 'sec-ch-ua-mobile: ?0'
+#  -H 'sec-ch-ua-platform: "Windows"'
+#  -H 'upgrade-insecure-requests: 1'
+#  -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36 Edg/95.0.1020.30'
+#  -H 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+#  -H 'sec-fetch-site: same-origin'
+#  -H 'sec-fetch-mode: navigate'
+#  -H 'sec-fetch-user: ?1'
+#  -H 'sec-fetch-dest: document'
+#  -H 'referer: https://www.ebay.com/itm/233871699267?'
+#  -H 'accept-language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6'
+#  -H 'cookie: ak_bmsc=594F6305A51E092E2CCDDE7C3A2FE720~000000000000000000000000000000~YAAQDFgDF+j6fnJ8AQAAHj/2xA3gSZg0StaOCN7yxtgmNIs1FmdeBlCpN5gpXyQRa8C6KE8NphYupCggvs/xl0NArIrpNbRtvCY1xhNsNNIpX1DIvDhUgtkC+4RhkrAS8Heqxo6uPHpvZiQCa3PK+kOkQZIU0nVX1Tlpxov1YpQOBm8wDr4kD0wHLvzTmiPfuYl74j59Q+zH8VFnAN2MzZLTywSF080GNdk4uCiRFr3J+ZgN5pnSkFdBQMmBfuWFNJZ29dUgxhqCJau/58yHmeoNmFna/tD0oM0C6ArbxTOlcg+8iJFPpjyHHt6LW4rDCh+LNsMZYhOHuzH96i4qJLXNJa7fVynkJbAIITMIy/UMNHOAK1Ty0eSo3NlkpCoDBiYgOLjg4+4=; AMCVS_A71B5B5B54F607AB0A4C98A2%40AdobeOrg=1; QuantumMetricUserID=da77f712ededff9c06ef3221f2277354; QuantumMetricSessionID=5e3aac14052d0b1ea651df6b6be629b4; AMCV_A71B5B5B54F607AB0A4C98A2%40AdobeOrg=-408604571%7CMCMID%7C84927487911006680140718693468062210744%7CMCAAMLH-1635996899%7C6%7CMCAAMB-1635996899%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCCIDH%7C-1705315378%7CMCOPTOUT-1635399299s%7CNONE%7CMCSYNCS%7C81841-18943%7CMCSYNCSOP%7C411-18936%7CvVersion%7C4.6.0; __gads=ID=3d9464f0d2e8755c-22a83c6503cb008c:T=1635392099:S=ALNI_MYVYJdG6dsEO0XdNSX5kukWRWHOhQ; __uzma=53f50db3-8970-4091-b45a-98b70bdf754b; __uzmb=1635392130; __uzme=3883; __ssds=2; __ssuzjsr2=a9be0cd8e; __uzmc=778511334693; __uzmd=1635392175; __uzmf=7f30007424a209-cf63-43c8-bfe8-e9e98d0d92b07cfaf31ceb575d3f13; __uzmaj2=b763b80d-a735-4ff8-af5b-b95d385d1bfa; __uzmbj2=1635392176; __uzmcj2=906511025187; __uzmdj2=1635392176; JSESSIONID=7978F4B6045AB41408BF5C193BB2AE39; npii=btguid/c4f63c7017c0a7b8bf8293e1ff4de77e653c83c8^cguid/c4f6542d17c0a770cd54c235ffffdfce653c83c8^; bm_sv=602F242376BE985D38177799792788B4~E2ZLZJ3cy3S/qbVg8woQL3MhUdBRmd2sod6vwATgtu0gDh0LlGVF/inlrrhYUonqV+0Zjp8qVyqRNV1f2HNa/BldJnKdk7lXHwb0nD1dhhJSlksLkvcs1y/E+lHgfRHMo8fp2SXtx/Soa/94qP8Ox3Ay+slPB+cKD0EyD+eDQCw=; dp1=bpbf/%23e000e00000010002000000635b5049^u1p/QEBfX0BAX19AQA**653c83c9^bl/NL653c83c9^; s=CgAD4ACBhe25JYzRmNjNjNzAxN2MwYTdiOGJmODI5M2UxZmY0ZGU3N2UA7gBBYXtuSTE0Bmh0dHBzOi8vd3d3LmViYXkuY29tL2IvQ2FyLVRydWNrLUxpZ2h0LUJ1bGJzLzE3MjUxNy9ibl81NjAzMjgHEl9Tvw**; nonsession=CgAAIABxhoanJMTYzNTM5MjMyMXgxOTM4NTE0ODk1Nzl4MHgyTgDKACBlPIPJYzRmNjNjNzAxN2MwYTdiOGJmODI5M2UxZmY0ZGU3N2UAywACYXoj0TYweVenUQ**; ebay=%5Ejs%3D1%5Esbf%3D%2310000000000%5Epsi%3DA%2FivUXqI*%5E; ds2=sotr/b9Votzzzzzzz^'
+#  --compressed
+GET https://cn.ebay.com/b/ATV-Side-by-Side-UTV-Parts-Accessories/43962/bn_562707?rt=nc&_pgn=5
+authority: www.ebay.com
+cache-control: max-age=0
+sec-ch-ua: "Microsoft Edge";v="95", "Chromium";v="95", ";Not A Brand";v="99"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+upgrade-insecure-requests: 1
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36 Edg/95.0.1020.30
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+sec-fetch-site: same-origin
+sec-fetch-mode: navigate
+sec-fetch-user: ?1
+sec-fetch-dest: document
+referer: https://www.ebay.com/itm/233871699267?
+accept-language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+cookie: ak_bmsc=594F6305A51E092E2CCDDE7C3A2FE720~000000000000000000000000000000~YAAQDFgDF+j6fnJ8AQAAHj/2xA3gSZg0StaOCN7yxtgmNIs1FmdeBlCpN5gpXyQRa8C6KE8NphYupCggvs/xl0NArIrpNbRtvCY1xhNsNNIpX1DIvDhUgtkC+4RhkrAS8Heqxo6uPHpvZiQCa3PK+kOkQZIU0nVX1Tlpxov1YpQOBm8wDr4kD0wHLvzTmiPfuYl74j59Q+zH8VFnAN2MzZLTywSF080GNdk4uCiRFr3J+ZgN5pnSkFdBQMmBfuWFNJZ29dUgxhqCJau/58yHmeoNmFna/tD0oM0C6ArbxTOlcg+8iJFPpjyHHt6LW4rDCh+LNsMZYhOHuzH96i4qJLXNJa7fVynkJbAIITMIy/UMNHOAK1Ty0eSo3NlkpCoDBiYgOLjg4+4=; AMCVS_A71B5B5B54F607AB0A4C98A2%40AdobeOrg=1; QuantumMetricUserID=da77f712ededff9c06ef3221f2277354; QuantumMetricSessionID=5e3aac14052d0b1ea651df6b6be629b4; AMCV_A71B5B5B54F607AB0A4C98A2%40AdobeOrg=-408604571%7CMCMID%7C84927487911006680140718693468062210744%7CMCAAMLH-1635996899%7C6%7CMCAAMB-1635996899%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCCIDH%7C-1705315378%7CMCOPTOUT-1635399299s%7CNONE%7CMCSYNCS%7C81841-18943%7CMCSYNCSOP%7C411-18936%7CvVersion%7C4.6.0; __gads=ID=3d9464f0d2e8755c-22a83c6503cb008c:T=1635392099:S=ALNI_MYVYJdG6dsEO0XdNSX5kukWRWHOhQ; __uzma=53f50db3-8970-4091-b45a-98b70bdf754b; __uzmb=1635392130; __uzme=3883; __ssds=2; __ssuzjsr2=a9be0cd8e; __uzmc=778511334693; __uzmd=1635392175; __uzmf=7f30007424a209-cf63-43c8-bfe8-e9e98d0d92b07cfaf31ceb575d3f13; __uzmaj2=b763b80d-a735-4ff8-af5b-b95d385d1bfa; __uzmbj2=1635392176; __uzmcj2=906511025187; __uzmdj2=1635392176; JSESSIONID=7978F4B6045AB41408BF5C193BB2AE39; npii=btguid/c4f63c7017c0a7b8bf8293e1ff4de77e653c83c8^cguid/c4f6542d17c0a770cd54c235ffffdfce653c83c8^; bm_sv=602F242376BE985D38177799792788B4~E2ZLZJ3cy3S/qbVg8woQL3MhUdBRmd2sod6vwATgtu0gDh0LlGVF/inlrrhYUonqV+0Zjp8qVyqRNV1f2HNa/BldJnKdk7lXHwb0nD1dhhJSlksLkvcs1y/E+lHgfRHMo8fp2SXtx/Soa/94qP8Ox3Ay+slPB+cKD0EyD+eDQCw=; dp1=bpbf/%23e000e00000010002000000635b5049^u1p/QEBfX0BAX19AQA**653c83c9^bl/NL653c83c9^; s=CgAD4ACBhe25JYzRmNjNjNzAxN2MwYTdiOGJmODI5M2UxZmY0ZGU3N2UA7gBBYXtuSTE0Bmh0dHBzOi8vd3d3LmViYXkuY29tL2IvQ2FyLVRydWNrLUxpZ2h0LUJ1bGJzLzE3MjUxNy9ibl81NjAzMjgHEl9Tvw**; nonsession=CgAAIABxhoanJMTYzNTM5MjMyMXgxOTM4NTE0ODk1Nzl4MHgyTgDKACBlPIPJYzRmNjNjNzAxN2MwYTdiOGJmODI5M2UxZmY0ZGU3N2UAywACYXoj0TYweVenUQ**; ebay=%5Ejs%3D1%5Esbf%3D%2310000000000%5Epsi%3DA%2FivUXqI*%5E; ds2=sotr/b9Votzzzzzzz^
+
+###
+
+
+
+###
+# curl 'https://list.jd.com/list.html?cat=670%2C671%2C672&go=0'
+#  -H 'authority: list.jd.com'
+#  -H 'cache-control: max-age=0'
+#  -H 'sec-ch-ua: "Google Chrome";v="95", "Chromium";v="95", ";Not A Brand";v="99"'
+#  -H 'sec-ch-ua-mobile: ?0'
+#  -H 'sec-ch-ua-platform: "Windows"'
+#  -H 'upgrade-insecure-requests: 1'
+#  -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36'
+#  -H 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+#  -H 'sec-fetch-site: same-site'
+#  -H 'sec-fetch-mode: navigate'
+#  -H 'sec-fetch-user: ?1'
+#  -H 'sec-fetch-dest: document'
+#  -H 'referer: https://diannao.jd.com/'
+#  -H 'accept-language: zh-CN,zh;q=0.9'
+#  -H 'cookie: shshshfpa=8b63dc23-f160-61d4-33e0-0adaf821cc7e-1620402598; __jdu=16204025980602657952; shshshfpb=p3swHvX8Gi9LOF7YdS4Sopg%3D%3D; pinId=HyISgTwxHcE3UEMbPHoOt7V9-x-f3wj7; unpl=V2_ZzNtbUFVQhZ0AERXKExUBmIEQQ0SU0pFJwpAVHIbXwdiAUEOclRCFnUURlVnGlUUZwcZXkRcQBZFCEdkeBBVAWMDE1VGZxBFLV0CFSNGF1wjU00zQwBBQHcJFF0uSgwDYgcaDhFTQEJ2XBVQL0oMDDdRFAhyZ0AVRQhHZHseXwRiAhFZSl5CEnQLQVB9EVgGVzMVbXJnQRNzCkZXSxhsBFdBRgFLUkYXdA8LVHwaXQBmABZVS1ZEFHYPQlJzHV81ZjMR; __jdv=76161171|baidu-pinzhuan|t_288551095_baidupinzhuan|cpc|0f3d30c8dba7459bb52f2eb5eba8ac7d_0_23020932bd9246baa58ac371832343bb|1635406046697; areaId=2; ipLoc-djd=2-2815-51975-0; 3AB9D23F7A4B3C9B=XTKT53H4BZMEIXXZKQGAZFD7DHODS45XI3VNV7C4PNYHYQZ6JHLQJ36LJULDONI4ORFG2ZWX2ABCXBMGIGSNMNEVZY; __jda=122270672.16204025980602657952.1620402598.1629692557.1635406047.10; __jdc=122270672; shshshfp=cbf6d009b842adeea97332b384da22c2; shshshsID=1707dadb8783de4b3e3f294bbfde0fc8_2_1635406059964; __jdb=122270672.4.16204025980602657952|10.1635406047'
+#  --compressed
+GET https://cn.ebay.com/b/ATV-Side-by-Side-UTV-Parts-Accessories/43962/bn_562707?rt=nc&_pgn=5
+authority: list.jd.com
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+referer: https://diannao.jd.com/
+###
+
+GET https://api.ebay.com/parts_compatibility/v1/compatible_products/listing/312567901735?fieldgroups=full&limit=20
+Authorization: Bearer v^1.1#i^1#f^0#I^3#p^1#r^1#t^Ul43XzY6MkNCOUJCMzQxQkY2RkQ0RDFGOEQzMDg4REYzRTdDMEVfMl8xI0VeMjYw
+X-EBAY-C-MARKETPLACE-ID: EBAY-US
+X-EBAY-C-TRACKING: cguid=b578185a17b0a77ea354425bf887fe5a,guid=b578009e17b0a4d34640edf8ffc93c06,pageid=2047675
+
+###
+
+# curl 'https://cn.ebay.com/b/ATV-Side-by-Side-UTV-Parts-Accessories/43962/bn_562707?rt=nc&_pgn=5'
+#  -H 'authority: cn.ebay.com'
+#  -H 'cache-control: max-age=0'
+#  -H 'sec-ch-ua: "Google Chrome";v="95", "Chromium";v="95", ";Not A Brand";v="99"'
+#  -H 'sec-ch-ua-mobile: ?0'
+#  -H 'sec-ch-ua-platform: "Windows"'
+#  -H 'upgrade-insecure-requests: 1'
+#  -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36'
+#  -H 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+#  -H 'sec-fetch-site: same-origin'
+#  -H 'sec-fetch-mode: navigate'
+#  -H 'sec-fetch-user: ?1'
+#  -H 'sec-fetch-dest: document'
+#  -H 'accept-language: zh-CN,zh;q=0.9'
+#  -H 'cookie: __gads=ID=7ab7066e24fe31fd:T=1630837155:S=ALNI_MZaJlLrvA49lNDNuKE368kNfoBJTQ; QuantumMetricUserID=badd0880e0643562c810ee05e3d9a411; cssg=b578009e17b0a4d34640edf8ffc93c06; QuantumMetricSessionID=bf204a617a84bc4ee28cd702fb93ea5f; ak_bmsc=01F33352516737C4A035F1DAB1CF0652~000000000000000000000000000000~YAAQOP9IFw9ONVt8AQAAyCBN1A0opo8CAqei0mtJQX8J3FXhLtcqUD0xSwHkyeYxT5O5AvVQJDLy3z1ks3sOeqoUXeAA2bOciYWbDdx110F155S0prZZSdvp4+5HMH0kAzPo6HHFykeEbdytyk/cuxeSzKz5fePrAgbdXNbSN67T4U7AGmzJSZcHf5emZsv4GGFvlhBqjWNznHuXHt9R6MhQsvJVDDiioWKksqYPobCRPNjHh0EPmicIZlKSGy6KdtR3GinLulJ8/4CHRUZLuHb6HNH0OXLt+Jb9P4xcMxX1RAZj1fGkqCm5KTC7A5MLrkgJEoUccJS1QrytHIuqqdRUno0EByohdwuODAohj+xGprskdQ2M37SLWUj+s6ANAX7uinq/HU4=; s=CgADuAERhf2LuMTQGaHR0cHM6Ly9jbi5lYmF5LmNvbS9iL0NvbW1lcmNpYWwtVHJ1Y2stUGFydHMvMTg0NjQ2L2JuXzExNTM4NTAyNAcA+AAgYX9i7mI1NzgwMDllMTdiMGE0ZDM0NjQwZWRmOGZmYzkzYzA2nQodnA**; bm_sv=3685DED48EAD3E45FA843AF30128B525~8lQn41gdsdVrRF4SJa3Xz3z0lcNUd/sF9TPgrSmoGhpNk44wj1z6wCkL988dPvU/305Jlv5E9MEHiYBHfxFCHXM/BZiS+FcNoTSG1UiLdM+mZ8HsrLNjiaMmaM1dWqrWHT9IvoC7m0yh9VsbJfhA4VmyRQgxsrXGaeXl1eQS66w=; ns1=BAQAAAXw0ACieAAaAANgASmNfRS1jNjl8NjAxXjE2MzA4MzczMTc2OTBeXjFeM3wyfDV8NHw3fDExXl5eNF4zXjEyXjEyXjJeMV4xXjBeMV4wXjFeNjQ0MjQ1OTA3NcioQLscDOT7CfSrvccgtkNZHMrF; nonsession=CgAAIABxhpZ6tMTYzNTY1MTk1MHgzNTI5OTIzNjc0MTd4MHgyTgDKACBlQHitYjU3ODAwOWUxN2IwYTRkMzQ2NDBlZGY4ZmZjOTNjMDYAywACYX4YtTYzeavayg**; dp1=bu1p/QEBfX0BAX19AQA**654078ad^pbf/%23e000e00000810002000000635f452d^bl/CN654078ad^; ebay=%5Ejs%3D1%5Ecv%3D15555%5Esbf%3D%2310000000000%5Epsi%3DAdQx3Tpw*%5E; ds2=sotr/b9Votzzzzzzz^; npii=btguid/b578009e17b0a4d34640edf8ffc93c06654079b3^cguid/b578185a17b0a77ea354425bf887fe5a654079b3^'
+#  --compressed
+GET https://cn.ebay.com/b/ATV-Side-by-Side-UTV-Parts-Accessories/43962/bn_562707?rt=nc&_pgn=5
+authority: cn.ebay.com
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+accept-language: zh-CN,zh;q=0.9
+###
+
+# curl 'https://api.ebay.com/parts_compatibility/v1/compatible_products/listing/114048694738?fieldgroups=full&limit=20'
+#  -H 'Connection: keep-alive'
+#  -H 'sec-ch-ua: "Google Chrome";v="95", "Chromium";v="95", ";Not A Brand";v="99"'
+#  -H 'X-EBAY-C-MARKETPLACE-ID: EBAY-US'
+#  -H 'sec-ch-ua-mobile: ?0'
+#  -H 'Authorization: Bearer v^1.1#i^1#r^1#I^3#p^1#f^0#t^Ul43Xzk6Q0E4NzQ1NDZFMzJERjUzQUI2NUE5MzBGNEJCQjYzMjhfMl8xI0VeMjYw'
+#  -H 'X-EBAY-C-CORRELATION-SESSION: cgi=b578009e17b0a4d34640edf8ffc93c06'
+#  -H 'Content-Type: application/json'
+#  -H 'Accept: application/json'
+#  -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36'
+#  -H 'X-EBAY-C-TRACKING: cguid=b578185a17b0a77ea354425bf887fe5a,guid=b578009e17b0a4d34640edf8ffc93c06,pageid=2047675'
+#  -H 'sec-ch-ua-platform: "Windows"'
+#  -H 'Origin: https://www.ebay.com'
+#  -H 'Sec-Fetch-Site: same-site'
+#  -H 'Sec-Fetch-Mode: cors'
+#  -H 'Sec-Fetch-Dest: empty'
+#  -H 'Referer: https://www.ebay.com/itm/114048694738?epid=249409809&hash=item1a8dd4f9d2:g:g5EAAOSwW4JeEFAH'
+#  -H 'Accept-Language: zh-CN,zh;q=0.9'
+#  --compressed
+GET https://api.ebay.com/parts_compatibility/v1/compatible_products/listing/114048694738?fieldgroups=full&limit=20
+X-EBAY-C-MARKETPLACE-ID: EBAY-US
+Authorization: Bearer v^1.1#i^1#r^1#I^3#p^1#f^0#t^Ul43Xzk6Q0E4NzQ1NDZFMzJERjUzQUI2NUE5MzBGNEJCQjYzMjhfMl8xI0VeMjYw
+X-EBAY-C-TRACKING: cguid=null,guid=b578009e17b0a4d34640edf8ffc93c06,pageid=2047675
+
+###
+

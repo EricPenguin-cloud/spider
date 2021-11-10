@@ -1,0 +1,37 @@
+mysql:
+  host: localhost
+  port: 3306
+  db: spider
+  user: root
+  password: root
+proxy:
+  useProxy: false
+  proxy-list:
+    - localhost:8080
+spider:
+  entry: category-pages
+  category-pages:
+    - https://cn.ebay.com/b/In-Car-Technology-GPS-Security-Devices/38635/bn_562662
+    - https://cn.ebay.com/b/ATV-Side-by-Side-UTV-Parts-Accessories/43962/bn_562707
+    - https://cn.ebay.com/b/Car-Truck-Accessory-Belts-Parts/262059/bn_583759
+    - https://cn.ebay.com/b/Car-Truck-Advanced-Driver-Assistance-Systems/262064/bn_7117881172
+    - https://cn.ebay.com/b/Car-Truck-Air-Fuel-Delivery/33549/bn_584325
+    - https://cn.ebay.com/b/Car-Truck-Air-Conditioning-Heating/33542/bn_584326
+    - https://cn.ebay.com/b/Car-Truck-Brakes-Brake-Parts/33559/bn_557694
+    - https://www.ebay.com/sch/Electric-Vehicle-Parts/177701/bn_576987/i.html
+    - https://cn.ebay.com/b/Car-Truck-Engine-Cooling-Components/33599/bn_561581
+    - https://cn.ebay.com/b/Car-Truck-Engines-Components/33612/bn_560118
+    - https://cn.ebay.com/b/Car-Truck-Exhaust-Emission-Systems/33605/bn_583501
+    - https://cn.ebay.com/b/Car-Truck-Exterior-Parts/33637/bn_584029
+    - https://cn.ebay.com/b/Car-Truck-Ignition-Systems/33687/bn_577605
+    - https://cn.ebay.com/b/Car-Truck-Interior-Parts/33694/bn_584056
+    - https://cn.ebay.com/b/Car-Truck-Lighting-Lamps/33707/bn_557923
+    - https://cn.ebay.com/b/Car-Truck-Racks-Cargo-Carriers/262215/bn_7117880183
+    - https://cn.ebay.com/b/Car-Truck-Starters-Alternators-ECUs-Wiring/33572/bn_583502
+    - https://cn.ebay.com/b/Car-Truck-Suspension-Steering-Parts/33579/bn_577405
+    - https://cn.ebay.com/b/Car-Truck-Towing-Parts-Accessories/180143/bn_7117890161
+    - https://cn.ebay.com/b/Car-Truck-Transmission-Drivetrain-Parts/33726/bn_557929
+    - https://cn.ebay.com/b/Car-Truck-Wheels-Tires-Parts/33743/bn_584076
+    - https://cn.ebay.com/b/Other-Car-Truck-Parts-Accessories/9886/bn_7117878185
+  product-detail-pages:
+    - https://www.ebay.com/itm/114048694738?epid=249409809&hash=item1a8dd4f9d2:g:g5EAAOSwW4JeEFAH
