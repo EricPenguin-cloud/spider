@@ -77,8 +77,7 @@ def process_product_table_info(url, sku_id, sku_name, soup):
             header["Authorization"] = script_list.split("'urwwidget', {\"value\":\"")[1].split("\",")[0]
             json_info = dispatcher.json("GET",
                                         "https://api.ebay.com/parts_compatibility/v1/compatible_products/listing/" + sku_id + "?fieldgroups=full"
-                                                                                                                              "&limit=" + str(
-                                            limit) + "&offset=" + str(offset),
+                                                                                                                              "&limit=" + str(limit) + "&offset=" + str(offset),
                                         head=header)
             page_info = json_info["compatibleProducts"]
             offset = page_info['offset']
