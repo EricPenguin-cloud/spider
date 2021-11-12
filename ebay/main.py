@@ -46,7 +46,7 @@ def process_product_detail_info(url):
             return None
         sku_id = url.split("https://www.ebay.com/itm/")[1].split("?")[0]
         sku_name = soup.find("h1", id="itemTitle").contents[1]
-        processs_product_table_info_1(url, sku_id, sku_name, soup)
+        process_product_table_info(url, sku_id, sku_name, soup)
         price = soup.find("span", itemprop="price").text
         properties = "{"
         rows = soup.find("div", class_="ux-layout-section").find_all("div", class_="ux-layout-section__row")
@@ -63,74 +63,61 @@ def process_product_detail_info(url):
         return {}
 
 
-def processs_product_table_info_1(url, sku_id, sku_name, soup):
+def process_product_table_info(url, sku_id, sku_name, soup):
     script_list = ""
+    product_table_info_list = []
     for script_contents in soup.findAll("script"):
         for script_content in script_contents:
             script_list = script_content + script_list
     try:
-        product_info_list_1 = []
-        product_info_list_2 = []
-        header = json.loads(script_list.split(",\"fitHeaders\":")[1].split("\"},\"")[0] + "\"}")
-        header["Authorization"] = script_list.split("'urwwidget', {\"value\":\"")[1].split("\",")[0]
-        jsonInfo = dispatcher.json("GET",
-                                   "https://api.ebay.com/parts_compatibility/v1/compatible_products/listing/" + sku_id + "?fieldgroups=full"
-                                                                                                                         "&limit=10000",
-                                   head=header)
-        table_info_list = []
-        if 'compatibleProductMetadata' in jsonInfo.keys():
-            table_info_list = jsonInfo['compatibleProductMetadata']['compatibilityProperties']
-        elif 'compatibleProducts' in jsonInfo.keys():
-            table_info_list = jsonInfo["compatibleProducts"]["members"]
-        for table_info in table_info_list:
-            if 'Engine' in table_info['productProperties'].keys():
-                product_info_list_2.append({"sku_id": sku_id, "batch": batch, "sku_name": sku_name,
-                                            "release_year": table_info['productProperties']["Year"],
-                                            "make": table_info['productProperties']["Make"],
-                                            "model": table_info['productProperties']["Model"],
-                                            "sku_trim": table_info['productProperties']["Trim"],
-                                            "engine": table_info['productProperties']["Engine"]})
-            else:
-                product_info_list_1.append({"sku_id": sku_id, "batch": batch, "sku_name": sku_name,
-                                            "release_year": table_info['productProperties']["Year"],
-                                            "make": table_info['productProperties']["Make"],
-                                            "model": table_info['productProperties']["Model"],
-                                            "sub_model": table_info['productProperties']["Submodel"],
-                                            "fitment_comments": table_info['productProperties']["FitmentComments"]})
-        writer.write_table_info_1(product_info_list_1)
-        writer.write_table_info_2(product_info_list_2)
+        limit = 20
+        offset = 0
+        while True:
+            header = json.loads(script_list.split(",\"fitHeaders\":")[1].split("\"},\"")[0] + "\"}")
+            header["Authorization"] = script_list.split("'urwwidget', {\"value\":\"")[1].split("\",")[0]
+            json_info = dispatcher.json("GET",
+                                        "https://api.ebay.com/parts_compatibility/v1/compatible_products/listing/" + sku_id + "?fieldgroups=full"
+                                                                                                                              "&limit=" + str(
+                                            limit) + "&offset=" + str(offset),
+                                        head=header)
+            page_info = json_info["compatibleProducts"]
+            offset = page_info['offset']
+            total = page_info['total']
+            for table_info in json_info["compatibleProducts"]["members"]:
+                product_table_info_list.append({"batch": batch, "sku_id": sku_id, "sku_name": sku_name,
+                                                "json_text": str(table_info['productProperties'])})
+            if offset + limit >= total:
+                break
+            offset = offset + limit
     except IndexError:
         log.error(url + "不存在表格")
     except KeyError:
         log.error(url + "字段不匹配")
     except AttributeError:
         log.error(url + "解析失败")
+    finally:
+        writer.write_table_info(product_table_info_list)
 
 
 def process_product_list(category_url):
     url_list = get_product_url_list(category_url)
     if url_list is None:
         return False
+    execute_product_list(url_list)
+    return True
+
+
+def execute_product_list(product_url_list):
+    if product_url_list is None:
+        log.error("parameter product-detail-pages is None !")
+        return
     product_detail_info_list = []
-    for product_url in url_list:
+    for product_url in product_url_list:
         data = process_product_detail_info(product_url)
         if data is None:
             continue
         product_detail_info_list.append(data)
     writer.write_product_info_list(product_detail_info_list)
-    return True
-
-
-def execute(category_url_list):
-    log.info("spider start,batch " + str(batch) + "...")
-    current_time = time.time()
-    for category_url in category_url_list:
-        page = 1
-        while process_product_list(
-                category_url + '?rt=nc&_pgn=' + str(page)):
-            page = page + 1
-        writer.close()
-    log.info("spider off ,cost" + str(time.time() - current_time))
 
 
 def execute_category_pages(category_url_list):
@@ -149,7 +136,8 @@ def execute_category_pages(category_url_list):
 
 
 entry = {
-    "category-pages": execute_category_pages
+    "category-pages": execute_category_pages,
+    "product-detail-pages": execute_product_list
 }
 
 if __name__ == '__main__':

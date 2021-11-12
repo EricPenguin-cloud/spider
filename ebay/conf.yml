@@ -9,7 +9,7 @@ proxy:
   proxy-list:
     - localhost:8080
 spider:
-  entry: category-pages
+  entry: product-detail-pages
   category-pages:
     - https://cn.ebay.com/b/In-Car-Technology-GPS-Security-Devices/38635/bn_562662
     - https://cn.ebay.com/b/ATV-Side-by-Side-UTV-Parts-Accessories/43962/bn_562707
@@ -34,4 +34,4 @@ spider:
     - https://cn.ebay.com/b/Car-Truck-Wheels-Tires-Parts/33743/bn_584076
     - https://cn.ebay.com/b/Other-Car-Truck-Parts-Accessories/9886/bn_7117878185
   product-detail-pages:
-    - https://www.ebay.com/itm/114048694738?epid=249409809&hash=item1a8dd4f9d2:g:g5EAAOSwW4JeEFAH
+    - https://www.ebay.com/itm/293551608447?epid=1170693443&hash=item44590a127f:g:GrIAAOSwzGdhAFjM
