@@ -27,7 +27,7 @@ class Dispatcher:
                 if self.useProxy:
                     pass
                 else:
-                    response = requests.request(method, url, data=body, headers=head, timeout=timeout)
+                    response = requests.request(method, url, data=body, headers=head, timeout=timeout, allow_redirects=False)
                     log.info("request down,cost " + str(time.time() - current))
                     result_text = response.text
                     return result_text
@@ -62,5 +62,12 @@ class Dispatcher:
         response = self.get(url, head=head, retry=retry)
         return BeautifulSoup(response, features="html")
 
-    def json(self, method, url, head, body='', timeout=15):
-        return json.loads(self.request(method, url, body=body, head=head, timeout=timeout))
+    def json(self, method, url, head, body='', retry=3, timeout=15):
+        try:
+            return json.loads(self.request(method, url, body=body, head=head, timeout=timeout))
+        except json.decoder.JSONDecodeError:
+            if retry == 0:
+                return {}
+            sleep()
+            retry = retry - 1
+            return self.json(method=method, url=url, head=head, body=body, timeout=timeout, retry=retry)

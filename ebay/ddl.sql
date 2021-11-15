@@ -33,3 +33,7 @@ create table ebay_table_info
     updated_time timestamp                    default CURRENT_TIMESTAMP not null on update CURRENT_TIMESTAMP comment '更新时间'
 );
 
+select product_info.sku_id,product_info.sku_name,product_info.price,product_info.properties,table_info.json_text
+from ebay_product_info product_info
+         left join ebay_table_info table_info on table_info.sku_id = product_info.sku_id
+group by product_info.sku_id,product_info.sku_name,product_info.price,product_info.properties,table_info.json_text

@@ -1,5 +1,6 @@
 import json
 import time
+import threading
 
 from dispatcher import Dispatcher
 from writer import Writer
@@ -9,6 +10,7 @@ from logger import log
 batch = ''
 writer = Writer()
 dispatcher = Dispatcher()
+lock = threading.RLock()
 
 html_header = {
     "authority": "cn.ebay.com",
@@ -77,7 +79,8 @@ def process_product_table_info(url, sku_id, sku_name, soup):
             header["Authorization"] = script_list.split("'urwwidget', {\"value\":\"")[1].split("\",")[0]
             json_info = dispatcher.json("GET",
                                         "https://api.ebay.com/parts_compatibility/v1/compatible_products/listing/" + sku_id + "?fieldgroups=full"
-                                                                                                                              "&limit=" + str(limit) + "&offset=" + str(offset),
+                                                                                                                              "&limit=" + str(
+                                            limit) + "&offset=" + str(offset),
                                         head=header)
             page_info = json_info["compatibleProducts"]
             offset = page_info['offset']
@@ -99,7 +102,11 @@ def process_product_table_info(url, sku_id, sku_name, soup):
 
 
 def process_product_list(category_url):
-    url_list = get_product_url_list(category_url)
+    try:
+        lock.acquire()
+        url_list = get_product_url_list(category_url)
+    finally:
+        lock.release()
     if url_list is None:
         return False
     execute_product_list(url_list)
@@ -124,14 +131,19 @@ def execute_category_pages(category_url_list):
         log.error("parameter category-pages is None !")
         return
     log.info("spider start,batch " + str(batch) + "...")
-    time.perf_counter()
+    index = 0
     for category_url in category_url_list:
-        page = 1
-        while process_product_list(
-                category_url + '?rt=nc&_pgn=' + str(page)):
-            page = page + 1
-        writer.close()
-    log.info("spider off ,cost" + str(time.perf_counter()))
+        t = threading.Thread(target=loop, args=[category_url], name='spider_thread_' + str(index))
+        t.start()
+        index = index + 1
+    log.info("spider off")
+
+
+def loop(category_url):
+    page = 1
+    while process_product_list(
+            category_url + '?rt=nc&_pgn=' + str(page)):
+        page = page + 1
 
 
 entry = {
@@ -142,6 +154,7 @@ entry = {
 if __name__ == '__main__':
     batch = str(time.strftime("%Y-%m-%d %H:%M:%S"))
     entry[conf('spider', 'entry')](conf('spider', conf('spider', 'entry')))
+    writer.close()
 
     # execute(category_url_List)
     # 1636193164.9191375
